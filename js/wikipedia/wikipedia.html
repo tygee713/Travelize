@@ -8,15 +8,14 @@
 	<script type="text/javascript">
 
 			var searchString='New York';
-
 			searchString=searchString.toLowerCase();
+			var descriptions=[];
 
 					//create dates in mm/dd/yyyy format for query string
 
 			var queryURL = 'https://en.wikipedia.org/w/api.php?action=opensearch&search='+searchString+'&format=json';
 
 			// var queryURL ='http://en.wikipedia.org/w/api.php?action=query&titles='+searchString+'&prop=revisions&rvprop=content&format=json'
-			console.log(queryURL);
 
 			$.ajax({
 				url: queryURL,
@@ -24,16 +23,19 @@
 				dataType: 'jsonp'
 			})
 				.done(function(response){
+
 					var stateDescription=response[2][0];
 
-					for (var i=0;i<response.length;i++){
-						if(response[1][i]==searchString){
-							stateDescription=response[1][i];
-							break;
+					for (var i=0;i<response[1].length;i++){
+						if(response[1][i].toLowerCase()==searchString){
+							stateDescription=response[2][i];
+							descriptions.push(stateDescription);
+							console.log(stateDescription);
 						}
 					}
-					console.log(stateDescription);
-			});
+				});
+
+
 	</script>
 </body>
 </html>

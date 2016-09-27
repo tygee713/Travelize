@@ -1,4 +1,7 @@
 
+var allValidationPassed=true,
+		stateValidation=true,
+		cityValidation=true;
 var validStates=['ALABAMA',
 'ALASKA',
 'ARIZONA',
@@ -64,3 +67,26 @@ function stateValidation(input){
 		}
 	}
 }
+
+
+$('#submit').click(
+
+	stateValidation=stateValidation($('#state').val());
+
+	if(stateValidation==true){
+
+	}
+	else{
+		//display error
+		allValidationPassed=false;
+	}
+
+	if(allValidationPassed===true){
+
+
+	}
+
+
+
+);
+

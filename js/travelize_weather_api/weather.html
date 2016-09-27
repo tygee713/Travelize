@@ -58,6 +58,23 @@ for(var i=0;i<5;i++){
 		});
 	}
 
+var averageHumidity=0,
+		averageMaxTemperature=0,
+		sumMaxTemperature=0,
+		averageMinTemperature=0,
+		sumMinTemperature=0,
+		denominator=0;
+
+		//calculate sum for temperature
+		for (var k=0;i<weatherObjects.length;k++){
+			for (var i=0; i<weatherObjects[k]['data']['weather'].length;i++){
+				sumMaxTemperature+=weatherObjects[k]['data']['weather'][i]['maxtempF'];
+				sumMinTemperature+=weatherObjects[k]['data']['weather'][i]['mintempF'];
+				denominator++;
+			}
+		}
+		averageMaxTemperature=sumMaxTemperature/denominator;
+		averageMinTemperature=sumMinTemperature/denominator;
 
 
 
