@@ -1,13 +1,7 @@
-<!-- <!DOCTYPE html> -->
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-  <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
-	<script type="text/javascript">
 
-			var searchString='New York';
+
+function findStateDescription(city, state){
+			var searchString=city;
 			searchString=searchString.toLowerCase();
 			var descriptions=[];
 
@@ -34,8 +28,4 @@
 						}
 					}
 				});
-
-
-	</script>
-</body>
-</html>
+}
