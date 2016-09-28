@@ -1,16 +1,9 @@
-<html>
-        <head>
-        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-        <meta content="utf-8" http-equiv="encoding">
-            <title>Yelp OAuth Example</title>
-            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-            <script type="text/javascript" src="./oauth.js"></script>
-            <script type="text/javascript" src="./sha1.js"></script>
-            <script type="text/javascript">
 
             function cb(data) {
                     console.log("cb: " + JSON.stringify(data));
             }
+
+            function findRestaurants(city, state){
 
                 var auth = {
                     //
@@ -31,7 +24,7 @@
 
                 var terms = 'food';
                     //search term
-                var near = 'Hillsborough, NJ';
+                var near = city+", "+state;
 
                 var accessor = {
                     consumerSecret : auth.consumerSecret,
@@ -102,10 +95,4 @@
                                     console.log('error[' + errorThrown + '], status[' + textStatus + '], jqXHR[' + JSON.stringify(jqXHR) + ']');
                         }
                 );
-
-            </script>
-        </head>
-        <body>
-            <div id="yelpdiv"></div>
-        </body>
-    </html>
+        }
