@@ -18,7 +18,7 @@ function findWeather(city, state, startDate, endDate){
 
 		var weatherObjects=[],
 				dateUserInput1=new Date(startDate),
-				dateUserInput2=new Date(endDate),
+				dateUserInput2=new Date(startDate),
 				dateStart=new Date(),
 				dateEnd=new Date();
 
@@ -73,4 +73,7 @@ function findWeather(city, state, startDate, endDate){
 				averageMaxTemperature=sumMaxTemperature/denominator;
 				averageMinTemperature=sumMinTemperature/denominator;
 
+				console.log(averageMaxTemperature);
+				
+				$('#averageTemp').html(averageMinTemperature+"F - "+averageMaxTemperature+"F");
 }
