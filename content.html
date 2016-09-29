@@ -6,6 +6,8 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
   <link rel="stylesheet" type="text/css" href="css/style2.css">
 
   
@@ -36,8 +38,7 @@
   </div>
 
 
-  <div class = "row" id = "middle">
-
+<!--   <div class = "row" id = "middle">
     <div class = "col m4" id="test">
       <div class="row" id="weather">
       <h5 class = "header light" id="weatherHeader">How's the Weather?</h5>
@@ -45,63 +46,98 @@
       <div class="row" id="col-box">
       <div class = "section" id = "weather">
         <div class = "container">
-          <p class="weatherParameters" id="averageTemp">Average Temperature</p>
+
         </div>
        </div>
        </div>
-    </div>
+    </div> -->
     
-
-    
-    <div class = "col m8" id="whereToEat">
-    <h5 class = "header light" id="eatHeader">What's there to eat?</h5>
-    <div class="row" id="food1">
-      
-        <div class = "section" id = "food">
-          <div class = "container">
-            <p id="r1">Restaurant 1</p>
-            <p id="r2">Restaurant 2</p>
-            <p id="r3">Restaurant 3</p>
+    <div class="row">
+      <!-- Weather -->
+      <div class="col s12 m4 l4">
+        <div class="row">
+          <div class="col s12">
+            <h5 class = "header light" id="weatherHeader">How's the Weather?</h5>                    
           </div>
         </div>
+        <div class="row">
+          <div id="col-box" class="col s12">
+            <p class="weatherParameters">Average Temperature</p>
+            <p class="weatherParameters">Humidity</p>
+            <p class="weatherParameters">Other info</p>
+          </div>
+        </div>       
+      </div>
+      <!-- Restaurants -->
+      <div class="col s12 m8 l8">
+        <div class="row">
+          <div class="col s12">
+            <h5 class = "header light" id="eatHeader">What's there to eat?</h5>
+          </div>
         </div>
-        
-        
+        <div id="food1" class="row">
+          <div class="container">
+          <!-- <div class="s4"> -->
+            <p>Restaurant 1</p>
+         <!--  </div> -->
+         <!--  <div class="col s4"> -->
+            <p>Restaurant 2</p>
+          <!-- </div> -->          
+          <!-- <div class="col s4"> -->
+            <p>Restaurant 3</p>
+           </div> 
+          <!-- </div> -->          
+        </div>
+      </div>
     </div>
-  </div>
+
     <!-- </div> -->
     <div id="bottomHeader1">
     
     </div>
-        <div class = "row" id = "bottom">
-        <h5 class = "header light" id="bottomHeader">What's going on there?</h5>
         
-    <div class = "col m12">
+        <div id="eventsHeader">
+           <h5 class = "header light" id="bottomHeader">What's going on there?</h5>
+        </div>
+
+        <div class = "row" id = "bottom">
+       
+        
+    <!-- <div class = "col m12"> -->
         <div class = "section" id = "events">
           <div class = "container">
             <p id="e1">Event 1</p>
             <p id="e2">Event 2</p>
+            <p id="e3">Event 3</p>
           </div>
         </div>
 
-  </div>
+  <!-- </div> -->
 
   </div>
 
   <div id="cr">
     <h3 id="cr1">&#169;opyright Travelize Corporation 2016</h3>
   </div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script>
+    $("#newSearch").click(function() {
+      window.location.href = 'index-2.html';
 
-  <script src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
-  
-  <script type="text/javascript" src="js/oauth.js"></script>
-  <script type="text/javascript" src="js/sha1.js"></script>
-  <script type="text/javascript" src="js/yelp.js"></script>
-  <script type="text/javascript" src="js/wiki.js"></script>
-  <script type="text/javascript" src="js/weather.js"></script>
-<!--   <script type="text/javascript" src="js/flikrApi.js"></script> -->
-  <script type="text/javascript" src="js/finalEventfulAPI.js"></script>
-  <script type="text/javascript" src="js/content.js"></script>
+    })
+
+    function resizeWeather(){
+      var foodHeight = $('#food1').height();
+      $('#col-box').height(foodHeight);
+    }
+
+    $(function(){
+      resizeWeather();
+    });
+
+    $(window).resize(function(){
+      resizeWeather();
+    });
+  </script>
 </body>
 </html>

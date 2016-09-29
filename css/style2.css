@@ -43,6 +43,7 @@
       border-color: black;
       border-radius: 10px;
       opacity: .4;
+      text-align: center;
 
 
     }
@@ -57,7 +58,7 @@
 
     .container {
       width: 95%;
-      text-align: center;
+      /*text-align: center;*/
     }
     #location {
       margin-top: 10%;
@@ -68,21 +69,30 @@
     }
 
     #description1 {
-      border-bottom-style: double;
+      /*border-bottom-style: double;
       border-bottom-color: black;
       border-bottom-width: 15px;
-      border-left-style: double;
+      border-left-style: solid;
       border-left-color: black;
       border-left-width: 8px;
       border-right-style: double;
       border-right-color: black;
       border-right-width: 8px;
+      border-top-style: solid;
+      border-top-width: 4px;
+      border-top-color: black;*/
+      border-style: solid;
+      border-width: 3px;
+      border-color: black;
+
       padding-bottom: 30px;
       padding-left: 30px;
       padding-right: 30px;
-      font-family: Kelvinch;
+     /* font-family: Kelvinch;*/
+      font-family: 'Quicksand', sans-serif;
       font-size:23px;
       color: DarkSeaGreen;
+      background-color: #C8DDEE;
       /*background-color: #F3F5F3;*/
 
     }
@@ -111,6 +121,7 @@
       border-color: black;
       border-width: 3px;
       height: 85%;
+      text-align: center;
       /*padding-bottom: 70px;*/
     }
 
@@ -152,7 +163,7 @@
     }
 
     #food1 {
-      background-color:FloralWhite;
+      background-color:#C8DDEE;
       /*height: 124%;*/
        border-style: solid;
       /*border-radius: 15px 15px 15px 15px;*/
@@ -168,9 +179,9 @@
       width: 33%;
       height:275px;
       /*background-color: Linen;*/
-      border-width: 1px;
+      /*border-width: 1px;
       border-style: solid;
-      border-radius: 10px;
+      border-radius: 10px;*/
      /* background-image: url("images/food-placeholder.png");*/
       margin-top: 10px;
       
@@ -183,9 +194,9 @@
       width:33%;
       height:275px;
      /* background-color:Linen;*/
-      border-width: 1px;
+      /*border-width: 1px;
       border-style: solid;
-      border-radius: 10px;
+      border-radius: 10px;*/
      /* background-image: url("images/food-placeholder.png");*/
       margin-top: 10px;
     }
@@ -196,9 +207,9 @@
       width: 33%;
       height:275px;
       /*background-color: Linen;*/
-      border-width: 1px;
+      /*border-width: 1px;
       border-style: solid;
-      border-radius: 10px;
+      border-radius: 10px;*/
      /* background-image: url("images/food-placeholder.png");*/
       margin-top: 10px;
       /*margin-bottom: auto;*/
@@ -208,7 +219,7 @@
     #bottom {
       width: 98%;
       height: 40%;
-      background-color: FloralWhite;
+      background-color: #C8DDEE;
       padding: 0px;
       border-style: solid;
       /*border-radius: 15px 15px 15px 15px;*/
@@ -226,9 +237,9 @@
       padding:0px;
     }
 
-    #e1 {
+  /*  #e1 {
       float: left;
-      margin-top: -20px;
+      
       display: inline-block;
       width: 48%;
       height:200px;
@@ -236,15 +247,15 @@
       border-width: 1px;
       border-style: solid;
       border-radius: 10px;
-      /*background-image: url("images/default-event1.jpeg");*/
+      
       background-repeat:no-repeat;
       background-size: cover;
 
-    }
+    }*/
 
-    #e2 {
+  /*  #e2 {
       float: right;
-      margin-top: -20px;
+    
       display: inline-block;
       width: 48%;
       height:200px;
@@ -252,11 +263,11 @@
       border-width: 1px;
       border-style: solid;
       border-radius: 10px;
-      /*background-image: url("images/default-event1.jpeg");*/
+     
       background-repeat:no-repeat;
       background-size: cover;
 
-    }
+    }*/
 
     #eatHeader {
       text-align: center;
@@ -305,7 +316,7 @@
 
      @media screen and (max-width: 768px){
     
-    #header {
+/*    #header {
       width: 100%;
     }
 
@@ -325,23 +336,30 @@
 
     #bottom {
       /*width: 100%;*/
-      margin-top: 280px;
-      margin-left: 10px;
-    }
+      /*margin-top: 280px;*/
+      /*margin-left: 10px;*/
+    /*}*/
     
     }
 
      @media screen and (max-width: 640px){
     
-    #header {
-      width: 100%;
+   /* #e1 {
+      width: 100%
     }
+
+    #e2 {
+      width: 100%
+    }*/
+  /*  #header {
+      width: 100%;
+    }*/
 
    /* #middle {
       width: 100%;
     }*/
 
-    #col-box {
+/*    #col-box {
       width: 175%;
     }
 
@@ -352,7 +370,7 @@
     #bottom {
       width: 100%;
       margin-top: 280px;
-    }
+    }*/
     }
 
     /*#snow{
