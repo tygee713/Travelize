@@ -14,33 +14,34 @@
   <div class = "section">
     <div class = "container">
       <h1 class = "header center" id="header">Travelize</h1>
-      <div class = "row center">
-        <!-- <h5 class = "header col s12 light">Where to?</h5> -->
-      </div>
     </div>
   </div>
 
   <div class="row">
     <div class = "col m4"></div>
     <div class = "col m4" id="form">
-      <form>
+      <form id="formValidate">
         <div class="row">
         <h5 class = "header col s12 light" id="where">Where to?</h5>
           <div class="input-field col m6">
-            <input id="city" type="text" placeholder = "City" class="validate">
+            <input id="city" type="text" placeholder = "City" name="city" data-error="#cityError">
+            <div id="cityError" class = "errorTxt"></div>
           </div>
           <div class="input-field col m6">
-            <input id="state" type="text" placeholder = "State" class="validate">
+            <input id="state" type="text" placeholder = "State" name="state" data-error="#stateError">
+            <div id="stateError" class="errorTxt"></div>
           </div>
         </div>
         <div class="row">
           <div class="input-field col m6">
-            <input placeholder="Start Date" id="startDate" type="date" class="validate" >
-            <label for="startDate dates" id="date2" class="active dates">Start Date</label>
+            <label for="startDate" id="date2" class="active dates">Start Date</label>
+            <input id="startDate" type="date" name="startDate" data-error="#startError">
+            <div id = "startError" class="errorTxt"></div>
           </div>
           <div class="input-field col m6">
-            <input placeholder="End Date" id="endDate" type="date" class="validate">
-            <label for="endDate" class="active" id="date1">End Date</label>
+            <label for="endDate" class="active dates" id="date1">End Date</label>
+            <input id="endDate" type="date" name="endDate" data-error="#endError">
+            <div id = "endError" class="errorTxt"></div>
           </div>
         </div>
         <div class = "row center-align">
@@ -53,6 +54,7 @@
 </div>
 
   <script src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+  <script src="js/jquery.validate.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
   <script type="text/javascript" src="js/firebase.js"></script>
 

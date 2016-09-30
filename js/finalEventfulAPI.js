@@ -4,7 +4,8 @@ function findEvents(city, state, startDate, endDate) {
   endDate = new Date(endDate);
   newEndDate = formatDateToString(endDate);
 
-  var queryURL = "https://crossorigin.me/https://api.eventful.com/json/events/search?...&app_key=5zNFnGb75BQD7wd8&location=" + city + "," + state + "&date=" + newStartDate + "-" + newEndDate + "&within=30";
+  //Constructs a query URL using the user inputted city, state, and dates
+  var queryURL = "https://crossorigin.me/https://api.eventful.com/json/events/search?...&app_key=5zNFnGb75BQD7wd8&location=" + city + "," + state + "&date=" + newStartDate + "-" + newEndDate + "&within=20";
   $.ajax({url:queryURL,method:"GET"}).done(function(response){
     var parsedResponse = jQuery.parseJSON(response);
     for (var i=0;i<3;i++) {
@@ -17,7 +18,8 @@ function findEvents(city, state, startDate, endDate) {
   });
 }
 
-function formatDateToString(date){
+//Formats the dates into the proper format for querying Eventful
+function formatDateToString(date) {
   var dd = (date.getDate() < 10 ? '0' : '') + date.getDate();
   var MM = ((date.getMonth() + 1) < 10 ? '0' : '') + (date.getMonth() + 1);
   var yyyy = date.getFullYear();
