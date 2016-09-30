@@ -95,9 +95,8 @@
                         a.attr('src', selectedRestaurants[i]['image_url']);
                         a.attr('width',100);
                         a.attr('height',100);
-                        a.appendTo($('<a>'));
-                        a.attr('href',selectedRestaurants[i]['url']);
-                        a.appendTo($('#r'+(i+1)));
+                        $('#restaurant'+(i+1)+'Link').attr('href',selectedRestaurants[i]['url']);
+                        a.appendTo($('#restaurant'+(i+1)));
                     }
                 })
                 .fail(function(jqXHR, textStatus, errorThrown) {

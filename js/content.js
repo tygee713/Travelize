@@ -17,12 +17,15 @@ var city,
 
 database.ref('/' + key).on("value", function(snapshot) {
   city = snapshot.val().City;
+  city = city.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
   state = snapshot.val().State;
+  state = state.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
   startDate = snapshot.val().StartDate;
   endDate = snapshot.val().EndDate;
   findWeather(city, state, startDate, endDate);
   getPhotoFromFlikr(city);
   findRestaurants(city,state);
   findStateDescription(city,state);
+  $('#location').html(city+', '+state);
 });
 
