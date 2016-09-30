@@ -22,5 +22,7 @@ database.ref('/' + key).on("value", function(snapshot) {
   endDate = snapshot.val().EndDate;
   findWeather(city, state, startDate, endDate);
   getPhotoFromFlikr(city);
+  findRestaurants(city,state);
+  findStateDescription(city,state);
 });
 

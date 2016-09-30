@@ -90,6 +90,15 @@
                         }
                         console.log(selectedRestaurants);
                     }
+                    for(var i=0;i<3;i++){
+                        var a=$('<img>');
+                        a.attr('src', selectedRestaurants[i]['image_url']);
+                        a.attr('width',100);
+                        a.attr('height',100);
+                        a.appendTo($('<a>'));
+                        a.attr('href',selectedRestaurants[i]['url']);
+                        a.appendTo($('#r'+(i+1)));
+                    }
                 })
                 .fail(function(jqXHR, textStatus, errorThrown) {
                                     console.log('error[' + errorThrown + '], status[' + textStatus + '], jqXHR[' + JSON.stringify(jqXHR) + ']');

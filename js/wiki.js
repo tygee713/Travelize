@@ -1,8 +1,8 @@
 
 
 function findStateDescription(city, state){
-			var searchString=city;
-			searchString=searchString.toLowerCase();
+			var searchString=state;
+			searchString=searchString.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 			var descriptions=[];
 
 					//create dates in mm/dd/yyyy format for query string
@@ -27,5 +27,6 @@ function findStateDescription(city, state){
 							console.log(stateDescription);
 						}
 					}
+					$('#description1').html(stateDescription);
 				});
 }
