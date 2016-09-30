@@ -10,17 +10,17 @@ function findEvents(city, state, startDate, endDate) {
     for (var i=0;i<3;i++) {
       var p = i+1;
       if (parsedResponse.events.event[i] != null){
-        $("#e" + p).append('<p>' + parsedResponse.events.event[i].title + '</p>'
-        + '<p>' + parsedResponse.events.event[i].start_time.substring(0,10) + '</p>' + '<p>' + parsedResponse.events.event[i].url + '</p>');
+        $("#e" + p).append('<p><a href="parsedResponse.events.event[i].url">' + parsedResponse.events.event[i].title + '</a></p>'
+        + '<p>' + parsedResponse.events.event[i].start_time.substring(0,10) + '</p>');
       }
     }
   });
 }
 
 function formatDateToString(date){
-   var dd = (date.getDate() < 10 ? '0' : '') + date.getDate();
-   var MM = ((date.getMonth() + 1) < 10 ? '0' : '') + (date.getMonth() + 1);
-   var yyyy = date.getFullYear();
+  var dd = (date.getDate() < 10 ? '0' : '') + date.getDate();
+  var MM = ((date.getMonth() + 1) < 10 ? '0' : '') + (date.getMonth() + 1);
+  var yyyy = date.getFullYear();
 
-   return (yyyy + MM + dd + '00');
+  return (yyyy + MM + dd + '00');
 }
