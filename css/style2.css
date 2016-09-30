@@ -1,55 +1,53 @@
     html {
       width: 100%;
       height: 100%;
-
     }
+
+    #master {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
     body {
       width: 100%;
       height: 100%;
-      /*background-image: url(background-test3.jpeg);
-      background-repeat:no-repeat;
-      background-size: cover;*/
-      background: SeaShell;
-  /*#EBE9EA*/
-  /*#EBEAEA*/
-
+      background-color: seaShell;
     }
+
     #header {
       height: 50%;
       background-image: linear-gradient(rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)),url("../assets/images/newyork.jpg");
       background-size: cover;
       color: white;
-      
+      font-family: "oswaldesque";   
     }
-   /* #weather {
-      background-image: url(sun.jpg);
-      background-size: cover;
-      height: 100%;
 
-    }*/
+    @font-face {
+    font-family: "oswaldesque";
+    src: url("../assets/fonts/oswaldesque/Oswaldesque Regular.ttf");
+    }
 
+    .col {
+      font-family: 'Open Sans';
+    }
+   
     #newSearch {
-      height: 50px;
-      width: 120px;
-      background-color: Linen;
-      font-size: 20px;
-      color: black;
-      line-height: 220%;
-      float: right;
-      position: relative;
-      border-width: 2px;
-      border-style: solid;
-      border-color: black;
-      border-radius: 10px;
-      opacity: .4;
-      text-align: center;
+      opacity: .99;
+      background-color:#4595D3;
+    }
 
-
+    #newSearch:hover {
+      opacity: .9;
+      box-shadow: 4px 4px 5px black;
     }
 
     #weatherHeader{
       text-align: center;
+    }
+
+    .weatherParameters:hover {
+      font-size: 20px;
     }
 
     .container p {
@@ -58,10 +56,12 @@
 
     .container {
       width: 95%;
-      /*text-align: center;*/
     }
+
     #location {
       margin-top: 10%;
+      text-shadow: 4px 4px 2px black;
+      font-size: 100px;
     }
 
     #top {
@@ -69,88 +69,48 @@
     }
 
     #description1 {
-      /*border-bottom-style: double;
-      border-bottom-color: black;
-      border-bottom-width: 15px;
-      border-left-style: solid;
-      border-left-color: black;
-      border-left-width: 8px;
-      border-right-style: double;
-      border-right-color: black;
-      border-right-width: 8px;
-      border-top-style: solid;
-      border-top-width: 4px;
-      border-top-color: black;*/
-      border-style: solid;
-      border-width: 3px;
-      border-color: black;
-
       padding-bottom: 30px;
       padding-left: 30px;
       padding-right: 30px;
-     /* font-family: Kelvinch;*/
-      font-family: 'Quicksand', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       font-size:23px;
-      color: DarkSeaGreen;
+      color: black;
       background-color: #C8DDEE;
-      /*background-color: #F3F5F3;*/
-
+      box-shadow: 10px 10px 5px silver;
     }
 
-    @font-face {
-    font-family: "Kelvinch";
-    src: url("../assets/fonts/Kelvinch Version 3_2/Kelvinch-Italic.otf");
-}
+     #description1:hover {
+      font-size: 27px;
+    }
+
     .row #col-box {
-      /*height: 65%;*/
       overflow: hidden;
       background-color: #B2B2B2;
       background-image: url(../assets/images/cold-weather7.png);
       /*sun.jpg, hot-weather4.jpeg, cold-weather7.png*/
-
-      /*https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiFobXZwLDPAhUEcT4KHXcEAtUQjRwIBw&url=%2Furl%3Fsa%3Di%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dimages%26cd%3D%26cad%3Drja%26uact%3D8%26ved%3D0ahUKEwiFobXZwLDPAhUEcT4KHXcEAtUQjRwIBw%26url%3Dhttp%253A%252F%252Fhdwplan.com%252Fwinter-wallpaper.html%26bvm%3Dbv.134052249%2Cd.dmo%26psig%3DAFQjCNEnISaBLV36k2kvwt0fta_SG7LpLw%26ust%3D1475098612705890&bvm=bv.134052249,d.dmo&psig=AFQjCNEnISaBLV36k2kvwt0fta_SG7LpLw&ust=1475098612705890*/
       background-size: cover;
       padding: 0px;
-
     }
 
-
     #col-box {
-      border-style: solid;
-     /* border-radius: 15px 15px 15px 15px;*/
-      border-color: black;
-      border-width: 3px;
       height: 85%;
       text-align: center;
-      /*padding-bottom: 70px;*/
+      box-shadow: 10px 10px 5px silver;
     }
 
     #middle {
       height: 50%;
       padding-bottom: 20px;
-
-      
-
     }
 
     .light {
-     /* background-color: tan;*/
       width: 100%;
       height: 40px;
       margin-bottom:0px;
-      /*padding: 0px;*/
-
     }
 
     #light-cover {
       width: 100%;
-    }
-
-    #test {
-      /*height: 143%;*/
-
-
-
     }
 
     .row #weather {
@@ -159,18 +119,11 @@
 
     #food{
       padding: 0px;
-
     }
 
     #food1 {
       background-color:#C8DDEE;
-      /*height: 124%;*/
-       border-style: solid;
-      /*border-radius: 15px 15px 15px 15px;*/
-      border-color: black;
-      border-width: 3px;
-
-
+      box-shadow: 10px 10px 5px silver;
     }
 
     #r1 {
@@ -178,14 +131,8 @@
       display: inline-block;
       width: 33%;
       height:275px;
-      /*background-color: Linen;*/
-      /*border-width: 1px;
-      border-style: solid;
-      border-radius: 10px;*/
-     /* background-image: url("images/food-placeholder.png");*/
       margin-top: 10px;
-      
-
+      font-size: 50px;
     }
 
      #r2 {
@@ -193,11 +140,6 @@
       display:inline-block;
       width:33%;
       height:275px;
-     /* background-color:Linen;*/
-      /*border-width: 1px;
-      border-style: solid;
-      border-radius: 10px;*/
-     /* background-image: url("images/food-placeholder.png");*/
       margin-top: 10px;
     }
 
@@ -206,14 +148,11 @@
       display: inline-block;
       width: 33%;
       height:275px;
-      /*background-color: Linen;*/
-      /*border-width: 1px;
-      border-style: solid;
-      border-radius: 10px;*/
-     /* background-image: url("images/food-placeholder.png");*/
       margin-top: 10px;
-      /*margin-bottom: auto;*/
+    }
 
+    .rest:hover {
+      font-size: 20px;
     }
 
     #bottom {
@@ -221,53 +160,22 @@
       height: 40%;
       background-color: #C8DDEE;
       padding: 0px;
-      border-style: solid;
-      /*border-radius: 15px 15px 15px 15px;*/
-      border-color: black;
-      border-width: 3px;
+      box-shadow: 10px 10px 5px silver;
+      font-family: 'Open Sans';
     }
 
     #bottomHeader {
-      /*text-align: right;*/
-      /*float: right;*/
       text-align: center;
+      font-family: 'Open Sans';
     }
 
     #events {
       padding:0px;
     }
 
-  /*  #e1 {
-      float: left;
-      
-      display: inline-block;
-      width: 48%;
-      height:200px;
-      background-color: Linen;
-      border-width: 1px;
-      border-style: solid;
-      border-radius: 10px;
-      
-      background-repeat:no-repeat;
-      background-size: cover;
-
-    }*/
-
-  /*  #e2 {
-      float: right;
-    
-      display: inline-block;
-      width: 48%;
-      height:200px;
-      background-color: Linen;
-      border-width: 1px;
-      border-style: solid;
-      border-radius: 10px;
-     
-      background-repeat:no-repeat;
-      background-size: cover;
-
-    }*/
+    .e:hover {
+      font-size: 20px;
+    }
 
     #eatHeader {
       text-align: center;
@@ -290,123 +198,12 @@
       font-size:50px;
     }
 
-/*    @media screen and (max-width: 980px){
-    
-    #header {
-      width: 100%;
+    @media screen and (max-width: 768px){
+
+      #master {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
     }
 
-    #middle {
-      width: 100%;
-    }
-
-    #col-box {
-      width: 100%;
-    }
-
-    #whereToEat {
-      width: 100%;
-    }
-
-    #bottom {
-      width: 100%;
-    }
-    
-    }*/
-
-     @media screen and (max-width: 768px){
-    
-/*    #header {
-      width: 100%;
-    }
-
-    #middle {
-      width: 100%;
-    }
-
-    #col-box {
-      width: 320%;
-    }
-
-    #whereToEat {
-      width: 100%;
-      float: top;
-      display: block;
-    }
-
-    #bottom {
-      /*width: 100%;*/
-      /*margin-top: 280px;*/
-      /*margin-left: 10px;*/
-    /*}*/
-    
-    }
-
-     @media screen and (max-width: 640px){
-    
-   /* #e1 {
-      width: 100%
-    }
-
-    #e2 {
-      width: 100%
-    }*/
-  /*  #header {
-      width: 100%;
-    }*/
-
-   /* #middle {
-      width: 100%;
-    }*/
-
-/*    #col-box {
-      width: 175%;
-    }
-
-    #whereToEat {
-      width: 100%;
-    }
-
-    #bottom {
-      width: 100%;
-      margin-top: 280px;
-    }*/
-    }
-
-    /*#snow{
-  background: none;
-  font-family: Androgyne;
-  background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index:1;
-  -webkit-animation: snow 10s linear infinite;
-  -moz-animation: snow 10s linear infinite;
-  -ms-animation: snow 10s linear infinite;
-  animation: snow 10s linear infinite;
-}
-@keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}
-@-moz-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
-}
-@-webkit-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}
-@-ms-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-} */
-
-/*https://codepen.io/NickyCDK/pen/AIonk*/
+   

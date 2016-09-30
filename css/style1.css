@@ -117,8 +117,56 @@ line-height: 100%;
 .input-field .prefix.active {
   color: #4595D3;
   }
-        
+
+  .errorTxt {
+    font-size: 10px;
+    color: red;
+  }
+  
+@media screen and (max-width: 980px){
+
+/*  #form {
+    /*width:50%;*/
+   /* margin-left:auto;
+    margin-right: auto; */
+ /* }*/
+
+}
 
 
+ @media screen and (max-width: 768px) {
+
+  body {
+    background-color: white;
+  }
+
+  #form {
+    width: 90%;
+    display: inline-block;
+    margin-right: auto;
+    margin-left: 40px;
+  }
+}
 
 
+@media screen and (max-width: 640px){
+
+  body {
+    background-image: none;
+    background-color: seaShell;
+  }
+
+  #form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #header {
+    font-size: 100px;
+    /*text-align: center;*/
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
