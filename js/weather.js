@@ -42,7 +42,7 @@ function findWeather(city, state, startDate, endDate){
 					enddatestr=((dateEnd.getFullYear()-(i+1))+'/'+mmddValidation(dateEnd.getMonth())+'/'+mmddValidation(dateEnd.getDate())).toString();
 
 
-			var queryURL = 'http://api.worldweatheronline.com/premium/v1/past-weather.ashx?key='+apiKey+'&q='+locationa+'&date='+datestr+'&enddate='+enddatestr+'&format=json';
+			var queryURL = 'https://api.worldweatheronline.com/premium/v1/past-weather.ashx?key='+apiKey+'&q='+locationa+'&date='+datestr+'&enddate='+enddatestr+'&format=json';
 			$.ajax({
 				url: queryURL,
 				method: 'GET'
