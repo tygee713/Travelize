@@ -61,7 +61,7 @@ $(document).ready(function() {
       },
         //For custom messages
         messages: {
-            state: "Please enter the full state"
+            state: "Please enter the full state."
         },
         errorElement : 'div',
         errorPlacement: function(error, element) {

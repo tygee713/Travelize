@@ -13,5 +13,6 @@ function changeWeatherPicture(minTemp, maxTemp) {
   else {
     $('#col-box').css('background-image', 'url(assets/images/cold-weather7.png)');
     $('#col-box').css('color', 'white');
+    $('#col-box').css('text-shadow', '1px 1px 4px black');
   }
 }

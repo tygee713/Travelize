@@ -16,8 +16,8 @@
 
     #header {
       /*height: 50%;*/
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.2)),url("../assets/images/newyork.jpg");
+      /*background-image: linear-gradient(rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)),url("../assets/images/newyork.jpg");*/
       background-size: cover;
       color: white;
       font-family: "oswaldesque";   
@@ -211,13 +211,16 @@
       }
 
       #location {
-        font-size: 40px;
+        font-size: 60px;
       }
     }
 
-   /* @media screen and (max-width: 640px){
-      #header {
-        font-size: 30px;
+    @media screen and (max-width: 640px){
+      #location {
+        font-size: 40px;
       }
-    }*/
+      #headBox {
+        width: 100%;
+      }
+    }
    

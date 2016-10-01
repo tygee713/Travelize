@@ -11,7 +11,7 @@ function findEvents(city, state, startDate, endDate) {
     for (var i=0;i<3;i++) {
       var p = i+1;
       if (parsedResponse.events.event[i] != null){
-        $("#e" + p).append('<p><a href="' + parsedResponse.events.event[i].url +'">' + parsedResponse.events.event[i].title + '</a></p>'
+        $("#e" + p).append('<p><a href="' + parsedResponse.events.event[i].url +'" target="_blank">' + parsedResponse.events.event[i].title + '</a></p>'
         + '<p>' + parsedResponse.events.event[i].start_time.substring(0,10) + '</p>');
       }
     }
