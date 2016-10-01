@@ -5,7 +5,7 @@ function findEvents(city, state, startDate, endDate) {
   newEndDate = formatDateToString(endDate);
 
   //Constructs a query URL using the user inputted city, state, and dates
-  var queryURL = "https://crossorigin.me/https://api.eventful.com/json/events/search?...&app_key=5zNFnGb75BQD7wd8&location=" + city + "," + state + "&date=" + newStartDate + "-" + newEndDate + "&within=20&ex_category=conference,learning_education,fundraisers,books,support,community,business,schools_alumni,clubs_associations,animals,religion_spirituality";
+  var queryURL = "https://crossorigin.me/https://api.eventful.com/json/events/search?...&app_key=5zNFnGb75BQD7wd8&location=" + city + "," + state + "&date=" + newStartDate + "-" + newEndDate + "&within=20&ex_category=conference,learning_education,fundraisers,books,support,community,business,schools_alumni,clubs_associations,animals,religion_spirituality&sort_order=popularity";
   $.ajax({url:queryURL,method:"GET"}).done(function(response){
     var parsedResponse = jQuery.parseJSON(response);
     for (var i=0;i<3;i++) {

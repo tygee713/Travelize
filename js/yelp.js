@@ -1,6 +1,5 @@
 
             function cb(data) {
-                    console.log("cb: " + JSON.stringify(data));
             }
 
             function findRestaurants(city, state){
@@ -88,7 +87,6 @@
                                 selectedRestaurants.push(response['businesses'][i]);
                             }
                         }
-                        console.log(selectedRestaurants);
                     }
                     for(var i=0;i<3;i++){
                         var b = $('<div>');
@@ -104,6 +102,8 @@
                         $('#restaurant'+(i+1)+'Link').attr('href',selectedRestaurants[i]['url']);
                         a.appendTo($('#restaurant'+(i+1)));
                     }
+
+                    resizeWeather();
                 })
                 .fail(function(jqXHR, textStatus, errorThrown) {
                                     console.log('error[' + errorThrown + '], status[' + textStatus + '], jqXHR[' + JSON.stringify(jqXHR) + ']');

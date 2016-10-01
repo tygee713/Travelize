@@ -25,8 +25,8 @@ database.ref('/' + key).on("value", function(snapshot) {
   findWeather(city, state, startDate, endDate);
   getPhotoFromFlikr(city);
   findRestaurants(city,state);
+  resizeWeather();
   findStateDescription(city,state);
   findEvents(city, state, startDate, endDate);
   $('#location').html(city+', '+state);
 });
-

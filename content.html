@@ -106,21 +106,21 @@
   <script>
     $("#newSearch").click(function() {
       window.location.href = 'index-2.html';
-
-    })
+    });
 
     function resizeWeather(){
       var foodHeight = $('#food1').height();
       $('#col-box').height(foodHeight);
     }
 
-    $(function(){
+    $(document).ready(function(){
       resizeWeather();
     });
 
     $(window).resize(function(){
-      resizeWeather();
+     resizeWeather();
     });
+    
   </script>
 
   <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
@@ -132,6 +132,7 @@
   <script type="text/javascript" src="js/weather.js"></script>
   <script type="text/javascript" src="js/flikrApi.js"></script>
   <script type="text/javascript" src="js/finalEventfulAPI.js"></script>
+  <script type="text/javascript" src="js/changeWeather.js"></script>
   <script type="text/javascript" src="js/content.js"></script>
 </body>
 </html>
