@@ -5,13 +5,13 @@ function findEvents(city, state, startDate, endDate) {
   newEndDate = formatDateToString(endDate);
 
   //Constructs a query URL using the user inputted city, state, and dates
-  var queryURL = "https://crossorigin.me/https://api.eventful.com/json/events/search?...&app_key=5zNFnGb75BQD7wd8&location=" + city + "," + state + "&date=" + newStartDate + "-" + newEndDate + "&within=20";
+  var queryURL = "https://crossorigin.me/https://api.eventful.com/json/events/search?...&app_key=5zNFnGb75BQD7wd8&location=" + city + "," + state + "&date=" + newStartDate + "-" + newEndDate + "&within=20&ex_category=conference,learning_education,fundraisers,books,support,community,business,schools_alumni,clubs_associations,animals,religion_spirituality";
   $.ajax({url:queryURL,method:"GET"}).done(function(response){
     var parsedResponse = jQuery.parseJSON(response);
     for (var i=0;i<3;i++) {
       var p = i+1;
       if (parsedResponse.events.event[i] != null){
-        $("#e" + p).append('<p><a href="parsedResponse.events.event[i].url">' + parsedResponse.events.event[i].title + '</a></p>'
+        $("#e" + p).append('<p><a href="' + parsedResponse.events.event[i].url +'">' + parsedResponse.events.event[i].title + '</a></p>'
         + '<p>' + parsedResponse.events.event[i].start_time.substring(0,10) + '</p>');
       }
     }

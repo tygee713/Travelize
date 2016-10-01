@@ -26,6 +26,7 @@ database.ref('/' + key).on("value", function(snapshot) {
   getPhotoFromFlikr(city);
   findRestaurants(city,state);
   findStateDescription(city,state);
+  findEvents(city, state, startDate, endDate);
   $('#location').html(city+', '+state);
 });
 
