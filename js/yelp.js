@@ -91,6 +91,12 @@
                         console.log(selectedRestaurants);
                     }
                     for(var i=0;i<3;i++){
+                        var b = $('<div>');
+                        b.html("<b>"+selectedRestaurants[i]['name']+"</b>");
+                        b.css('font-size',20);
+                        b.appendTo($('#restaurant'+(i+1)));
+                        $('#restaurant'+(i+1)).append("<b> Rating: "+selectedRestaurants[i]['rating']+"</b><br>");
+                        $('#restaurant'+(i+1)).append("<b>"+selectedRestaurants[i]['categories'][0][0]+"</b><br>");
                         var a=$('<img>');
                         a.attr('src', selectedRestaurants[i]['image_url']);
                         a.attr('width',100);
