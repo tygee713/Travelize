@@ -15,7 +15,7 @@
     }
 
     #header {
-      height: 50%;
+      /*height: 50%;*/
       background-image: linear-gradient(rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)),url("../assets/images/newyork.jpg");
       background-size: cover;
@@ -194,6 +194,11 @@
       text-align: center;
     }
 
+    #newSearch {
+      font-family: "Open Sans", sans-serif;
+      font-size: 12px;
+    }
+
     #cr1::first-letter{
       font-size:50px;
     }
@@ -204,6 +209,15 @@
         margin-left: 0px;
         margin-right: 0px;
       }
+
+      #location {
+        font-size: 40px;
+      }
     }
 
+   /* @media screen and (max-width: 640px){
+      #header {
+        font-size: 30px;
+      }
+    }*/
    
